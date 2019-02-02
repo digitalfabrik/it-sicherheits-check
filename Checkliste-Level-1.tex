@@ -1,0 +1,107 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    urlcolor=blue,
+}
+\urlstyle{same}
+\begin{document}
+\title{%
+  Checkliste zur IT-Sicherheit \\
+  \large Grundschutz}
+\author{Tür an Tür - Digitalfabrik}
+\maketitle
+\section{Einleitung}
+Diese Checkliste enthält eine Liste von Einzelmaßnahmen für die Verbesserung der IT-Sicherheit in kleinen Organisationen, in denen beispielsweise auch Ehrenamtliche mitarbeiten. Gleichzeitig sind die genannten Regeln aber auch allgemeingültig, können also auch für andere Organisatationen herangezogen werden. Dabei sind die einzelnen Punkte möglichst konkret formuliert, sollen also auch für Laien verständlich sein. Es geht in diesen Dokumenten nicht um das Etablieren eines ausführlichen Sicherheitsmanagements, sondern um einzelne konkrete Maßnahmen.
+
+Die Checkliste ist auf zwei Dokumente aufgeteilt:
+
+\begin{description}
+\item [Grundschutz]{Hier sind Maßnahmen gelistet, die umgesetz werden müssen.}
+\item[Erweiterter Schutz]{Die hier enthaltenen Regeln erweitern das Dokument \textbf{Grundschutz}. Die Umsetzung wird empfohlen.}
+\end{description}
+
+Punkte, die noch nicht umgesetzt sind, sollten so schnell wie möglich umgesetzt werden. Als zusätzliches Dokument kann beispielsweise der \href{https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Leitfaden/GS-Leitfaden_pdf.pdf}{Leitfaden Informationssicherheit} des BSI herangezogen werden.
+
+Dieses Dokument ist \textbf{CC BY-SA 4.0} (\url{https://creativecommons.org/licenses/by-sa/3.0/de/}) lizenziert. Der Source Code findet sich bei \url{https://github.com/digitalfabrik/it-sicherheits-check}.
+
+\section{Organisatorische Maßnahmen}
+\begin{todolist}
+\item{Es gibt einen IT-Sicherheitsbeauftragten.}
+\item{Es gibt einen Datenschutzbeauftragten.}
+\item{Es gibt eine Ansprechstelle bei Notfällen (Computer Emergency Response Team, Computer Security Incident Response Team). Mitarbeiter kennen die Kontaktwege.}
+\item{Zugriffe auf Daten werden nur nach Notwendigkeit vergeben.}
+\item{Es gibt einen dokumentierten Prozess für den Ein- und Austritt von Mitarbeitern.}
+\item{Mitarbeiter sind im Umgang mit personenbezogenen Daten geschult.}
+\end{todolist}
+
+\section{Physischer Zugang}
+\begin{todolist}
+\item{Alle Rechner sind mit passwortgeschützten Logins versehen.}
+\item{Desktop-Computer werden (automisch) gesperrt, sobald der Arbeitsplatz verlassen wird.}
+\item{Netzwerksteckdosen sind nicht frei zugänglich.}
+\item{Sensible Informationen (beispielsweise Passwortzettel, Adresslisten, etc.) liegen nicht offen herum.}
+\item{Festplatten von mobilen Geräten (Laptops, Smartphones) sind verschlüsselt.}
+\item{Mobile Datenträger (Externe Festplatten, USB Sticks) sind verschlüsselt.}
+\item{Bevor Datenträger veräußert werden, werden sie komplett überschrieben oder vernichtet.}
+\item{Nicht vertrauenswürdige Personen haben keinen (unbeaufsichtigten) Zutritt zu Räumen mit IT-Infrastruktur (Rechnern, Netzwerksteckdosen, Datenträger, etc.).}
+\end{todolist}
+
+\section{Passwörter}
+\begin{todolist}
+\item{Passwortregeln wurden den Mitarbeitern mitgeteilt und zur Kenntnis genommen.}
+\item{Passwörter sind mindestens 12 Zeichen lang, bestehend aus zufälligen Zeichen, \textit{ODER} bestehen aus mindestens 4 Wörtern.}
+\item{Auf dem Rechner gespeicherte Passwörter sind ausschließlich in Passwortmanagern gspeichert.}
+\item{Für jeden Dienst wird ein anderes Passwort verwendet.}
+\item{Es gibt \textit{keine} Pflicht zur regelmäßigen Passwortänderung.}
+\end{todolist}
+
+\section{Software}
+\begin{todolist}
+\item{Software-Updates für \textit{alle} Programme werden zeitnah (maximal Tage) nach Erscheinen installiert.}
+\item{Unnötige Software wird deinstalliert.}
+\item{Es werden nur aktuelle Browser-Versionen (Firefox, Edge, Chrome, Chromium, Safari) eingesetzt.}
+\item{Software wird nur aus vertrauenswürdigen Quellen installiert, beispielsweise per Download direkt von der Hersteller-Website. Software darf nicht von zufälligen Links aus Suchmaschinen-Ergebnissen installiert werden.}
+\item{Es wird keine Software (Betriebssysteme, Programme) verwendet, die keine Updates mehr bekommt.}
+\end{todolist}
+
+\section{Alltägliche Arbeit}
+\begin{todolist}
+\item{E-Mail-Anhänge werden nur von vertrauenswürdigen Absendern geöffnet.}
+\item{Makros in über das Internet (E-Mail, Download) bezogenen Office-Dateien werden nicht aktiviert.}
+\item{Es werden nur Websites mit verschlüsselter Verbindung (HTTPS) besucht.}
+\item{Geschäftskritische Anweisungen über normale (nicht kryptografisch signierte E-Mails) werden über einen vertrauenswürdigen zweiten Kanal verifiziert.}
+\item{Bei der Eingabe kritischer Daten auf Websites wird die Seiten-Adresse geprüft.}
+\end{todolist}
+
+\section{Netzwerk}
+\begin{todolist}
+\item{Bei Wifi/WLAN ist \textit{nur} WPA2 aktiviert, unverschlüsselte Verbindungen, sowie WEP und WPA sind deaktiviert.}
+\item{Beim WLAN/Wifi-Passwort wurden die Passwort-Richtlinien beachtet.}
+\item{Der Router und andere Netzwerk- und Internet-of-Things-Geräte erhalten regelmäßig Software-Updates.}
+\item{Standard-Passwörter von Routern, IP-Kameras, und anderen Geräten sind auf sichere Passwörter geändert.}
+\item{Mit dem Netzwerk verbundene Computer geben keine Ressourcen im Netzwerk frei (\textit{Öffentliches Netzwerk}).}
+\item{Im Intranet werden ausschließlich verschlüsselte Verbindungen genutzt.}
+\item{Alle Dienste im Intranet erfordern eine Authentifizierung.}
+\end{todolist}
+
+\section{Backups}
+\begin{todolist}
+\item{Alle Daten werden mindestens wöchentlich, kritische Daten täglich gesichert.}
+\item{Backups werden zusätzlich auf Offline-Medien (nicht verbundene externe Festplatten, DVD, USB-Sticks) aufbewart.}
+\item{Eine Kopie der Backups wird an einem anderen Ort (außerhalb des Gebäudes) gelagert, beispielsweise in einer Bank.}
+\item{Die Wiederherstellung der Datenbestände aus Backups wird regelmäßig geprüft.}
+\end{todolist}
+
+\end{document}
